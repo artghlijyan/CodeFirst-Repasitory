@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.EntityFrameworkCore;
 
 namespace DbRepasitory.Repasitories.Impl
 {
@@ -18,17 +20,17 @@ namespace DbRepasitory.Repasitories.Impl
             return null;
         }
 
-        public void Add(TEntity entity)
+        public EntityEntry<TEntity> Add(TEntity entity)
         {
-            _context.Add(entity);
+            return _context.entities.Add(entity);
         }
 
         public void AddRange(IEnumerable<TEntity> entities)
         {
-            _context.AddRange(entities);
+            _context.entities.AddRange(entities);
         }
 
-        public IEnumerable<TEntity> AsEnumerable()
+        public DbSet<TEntity> AsEnumerable()
         {
             return _context.entities;
         }
@@ -43,9 +45,9 @@ namespace DbRepasitory.Repasitories.Impl
             return 0;
         }
 
-        public bool Delete(int id)
+        public EntityEntry<TEntity> Remove(TEntity entity)
         {
-            return false;
+            return this._context.entities.Remove(entity);
         }
 
         public int SaveChanges()

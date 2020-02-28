@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
+using System.Collections.Generic;
 
 namespace DbRepasitory
 {
     public interface IRepasitory<TEntity> where TEntity : class, new()
     {
-        void Add(TEntity model);
+        EntityEntry<TEntity> Add(TEntity model);
 
         void AddRange(IEnumerable<TEntity> entities);
 

@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace DbRepasitory
 {
-    class SqlContext<TEntity> : DbContext where TEntity : class
+    public class SqlContext<TEntity> : DbContext where TEntity : class
     {
-        internal DbSet<TEntity> entities;
+        internal DbSet<TEntity> entities { get; set; }
         string _conString;
 
         public SqlContext(string conString)
