@@ -9,5 +9,7 @@ namespace DbRepasitory
         void AddRange(IEnumerable<TEntity> entities);
 
         void AddRange(params object[] entities);
+
+        int SaveChanges();
     }
 }

@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 using System;
-using System.Runtime.InteropServices;
-using Microsoft.Win32.SafeHandles;
 
 namespace DbRepasitory.Repasitories.Impl
 {
@@ -30,6 +28,11 @@ namespace DbRepasitory.Repasitories.Impl
             _context.AddRange(entities);
         }
 
+        public IEnumerable<TEntity> AsEnumerable()
+        {
+            return _context.entities;
+        }
+
         public void AddRange(params object[] entities)
         {
             this.AddRange(entities);
@@ -43,6 +46,11 @@ namespace DbRepasitory.Repasitories.Impl
         public bool Delete(int id)
         {
             return false;
+        }
+
+        public int SaveChanges()
+        {
+            return _context.SaveChanges();
         }
 
         #region Disposing

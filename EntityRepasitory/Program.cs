@@ -1,6 +1,8 @@
 ﻿using DbRepasitory.Models;
 using DbRepasitory.Repasitories.Impl;
 using System;
+using System.Linq;
+
 // AddRange(), RemoveRange(), UpdateRange(),
 namespace ReppoApp
 {
@@ -16,8 +18,14 @@ namespace ReppoApp
                     Age = 38,
                 };
 
-                //userRepo.Add(user);
-                //userRepo.
+                userRepo.Add(user);
+                userRepo.SaveChanges();
+                var users = userRepo.AsEnumerable().ToList();
+
+                foreach (var us in users)
+                {
+                    Console.WriteLine();
+                }
             }
 
             //Console.WriteLine("Adding");
