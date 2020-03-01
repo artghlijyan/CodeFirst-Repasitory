@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace DbRepasitory.Repasitories.Impl
 {
@@ -14,40 +14,43 @@ namespace DbRepasitory.Repasitories.Impl
         {
             this._context = new SqlContext<TEntity>(conString);
         }
-
-        public IEnumerable<TEntity> SelectAll()
-        {
-            return null;
-        }
-
-        public EntityEntry<TEntity> Add(TEntity entity)
-        {
-            return _context.entities.Add(entity);
-        }
-
-        public void AddRange(IEnumerable<TEntity> entities)
-        {
-            _context.entities.AddRange(entities);
-        }
-
-        public DbSet<TEntity> AsEnumerable()
+        public IQueryable<TEntity> AsEnumerable()
         {
             return _context.entities;
         }
 
-        public void AddRange(params object[] entities)
+        public EntityEntry<TEntity> Add(TEntity entity)
         {
-            this.AddRange(entities);
+            return _context.Add(entity);
         }
 
-        public int Update(TEntity entity)
+        public void AddRange(IEnumerable<TEntity> entities)
         {
-            return 0;
+            _context.AddRange(entities);
         }
+
+        //public void AddRange(params object[] entities)
+        //{
+        //    this._context.AddRange();
+        //}
 
         public EntityEntry<TEntity> Remove(TEntity entity)
         {
             return this._context.entities.Remove(entity);
+        }
+        public EntityEntry<TEntity> Update(TEntity entity)
+        {
+            return _context.Update(entity);
+        }
+
+        public void RemoveRange(IEnumerable<object> entities)
+        {
+            _context.RemoveRange(entities);
+        }
+
+        public void UpdateRange(IEnumerable<object> entities)
+        {
+            _context.UpdateRange(entities);
         }
 
         public int SaveChanges()

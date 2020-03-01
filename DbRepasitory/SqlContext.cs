@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DbRepasitory
@@ -17,11 +19,6 @@ namespace DbRepasitory
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(this._conString);
-        }
-
-        public void Do()
-        {
-            var entityList = entities.ToList();
         }
     }
 }
