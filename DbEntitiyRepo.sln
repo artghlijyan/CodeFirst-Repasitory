@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepoApp", "EntityRepasitory\RepoApp.csproj", "{62019D84-DD9E-4681-A1CE-9005FBBB7D2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbRepasitory", "DbRepasitory\DbRepasitory.csproj", "{11CEA984-E3FE-412C-BE16-F194717478F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbRepasitory", "DbRepasitory\DbRepasitory.csproj", "{11CEA984-E3FE-412C-BE16-F194717478F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepoApp", "RepoApp\RepoApp.csproj", "{0170C82C-B25E-4593-BE8E-189A11730BD3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{62019D84-DD9E-4681-A1CE-9005FBBB7D2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{62019D84-DD9E-4681-A1CE-9005FBBB7D2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{62019D84-DD9E-4681-A1CE-9005FBBB7D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{62019D84-DD9E-4681-A1CE-9005FBBB7D2D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{11CEA984-E3FE-412C-BE16-F194717478F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{11CEA984-E3FE-412C-BE16-F194717478F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11CEA984-E3FE-412C-BE16-F194717478F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11CEA984-E3FE-412C-BE16-F194717478F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0170C82C-B25E-4593-BE8E-189A11730BD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0170C82C-B25E-4593-BE8E-189A11730BD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0170C82C-B25E-4593-BE8E-189A11730BD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0170C82C-B25E-4593-BE8E-189A11730BD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
