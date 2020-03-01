@@ -1,7 +1,6 @@
 ﻿using DbRepasitory.Models;
 using DbRepasitory.Repasitories.Impl;
 using System;
-using System.Collections;
 using System.Linq;
 
 namespace ReppoApp
@@ -9,6 +8,7 @@ namespace ReppoApp
     class Program
     {
         // TODO - Paramsov AddRange chi anum
+        //TODO - chi haskanum vor method@ kanchi, inch anel?
         static void Main(string[] args)
         {
             using (DbRepasitory<User> userRepo = new DbRepasitory<User>(ConnectionStrings.HomeSqlConString))
