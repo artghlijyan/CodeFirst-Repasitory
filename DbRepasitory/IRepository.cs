@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace DbRepasitory
 {
-    public interface IRepasitory<TEntity> where TEntity : class, new()
+    public interface IRepository<TEntity> where TEntity : class, new()
     {
         IQueryable<TEntity> AsEnumerable();
 

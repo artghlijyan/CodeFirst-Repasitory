@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace DbRepasitory.Repasitories.Impl
 {
-    public class DbRepasitory<TEntity> : IRepasitory<TEntity>, IDisposable
+    public class DbRepasitory<TEntity> : IRepository<TEntity>, IDisposable
         where TEntity : class, new()
     {
         private readonly SqlContext<TEntity> _context;
